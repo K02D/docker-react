@@ -8,4 +8,4 @@ To run the dev server:
 To run the production server:
 `docker build .`
 
-`docker run -p 8080:80 b5530bde3a3a`
+`docker run -p 8080:80 b5530bde3a3a` (get the hash from the previous command)

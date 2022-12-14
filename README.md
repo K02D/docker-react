@@ -1,3 +1,6 @@
+React app which gets automatically built into a Docker container and deployed to AWS Elastic Beanstalk using Github Actions
+on every push to the master branch.
+
 Commands to run:
 
 To run the dev server:

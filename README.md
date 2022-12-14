@@ -4,7 +4,7 @@ To run the dev server:
 
 `docker build -f Dockerfile.dev -t k02d/frontend .`
 
-`docker-compose up`
+`docker-compose -f docker-compose-dev.yml up`
 
 To run the production server:
 

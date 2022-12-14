@@ -1,21 +1,9 @@
+# We need this docker-compose.yml file because AWS Elastic Beanstalk looks for it by default
 version: '3'
 services:
   web:
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     ports:
-      - "3000:3000"
-    volumes:
-      - /app/node_modules # use node_modules that already exists inside the container; don't mount node_modules sinc it won't exist on host
-      - .:/app # mount everything in current directory to /app
-  
-  # We need a separate service so changes in test files are detected live (adding a test and saving it will trigger a test run)
-  tests:
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    volumes:
-      - /app/node_modules
-      - .:/app
-    command: ["npm", "run", "test"]
+      - '80:80'
